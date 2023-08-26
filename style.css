@@ -1,0 +1,85 @@
+*{
+    --bar-heigth:2vh;
+}
+
+body{
+    background-color: lightgrey;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+#question{
+    grid-column: 1;
+    display : flexbox;
+}
+
+#resultat{
+    grid-column: 2;
+}
+
+#boiteReponseContainer{
+    display: flexbox;
+}
+
+.boite{
+    position: relative;
+    padding: 1rem;
+    background-color: grey;
+}
+
+.colonne{
+    text-align: center;
+    align-content: center;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.bouton{
+    margin : 1rem;
+}
+
+#strtbtn{
+    width : 75%;
+    visibility: hidden;
+}
+
+#stpbtn{
+    visibility: hidden;
+}
+
+p{
+    color : red;
+    font-size: xx-large;
+}
+
+#progressbarbackground{
+    position: absolute;
+    top: calc(100vh - var(--bar-heigth));
+    width: 100vw;
+    height: var(--bar-heigth);
+    background-color: grey;
+    z-index: 0;
+}
+
+#progressbar{
+    position: absolute;
+    background-color: red;
+    z-index: 1;
+    height: var(--bar-heigth);
+    top: calc(100vh - var(--bar-heigth));
+}
+
+.questions {
+    top : 0;
+    left : 0;
+    z-index: 5;
+    position: absolute;
+    display: flexbox;
+}

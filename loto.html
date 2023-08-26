@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>LOTO</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            <div id="questions"></div>
+            <div id="question" class="colonne">
+                <h2>Question</h2>
+                <div id="boiteQuestion" class="boite">
+                    <input type="file" id="fileInput" placeholder="chemin/du/fichier/nom.txt" accept=".txt">
+                    <select id="timer-select" onchange="Loto.changeTime()">
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <button id="strtbtn" class="bouton">Lancer le tirage</button>
+            </div>
+
+            <div id="resultat" class="colonne">
+                <h2>Résultat(s)</h2>
+                <div id="boiteReponseContainer" class="boite">
+                </div>
+                <button id="stpbtn" class="bouton">Arreter le décompte</button>
+            </div>
+        </div>
+        
+        <div id="progressbarbackground"></div>
+        <div id="progressbar"> </div>
+        <script src="script.js"></script>
+    </body>
+</html>
